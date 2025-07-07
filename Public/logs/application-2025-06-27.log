@@ -1,0 +1,80 @@
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Synctables] Procesando 1258 registros"}
+{"level":"error","message":"[Synctables] Error crítico: "}
+{"level":"error","message":"[MVsync] Error crítico: Error en sincronización: "}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Synctables] Procesando 1264 registros"}
+{"level":"error","message":"[Synctables] Error crítico: "}
+{"level":"error","message":"[MVsync] Error crítico: Error en sincronización: "}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Synctables] Procesando 1267 registros"}
+{"level":"error","message":"[Synctables] Error crítico: "}
+{"level":"error","message":"[MVsync] Error crítico: Error en sincronización: "}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Synctables] Procesando 1277 registros"}
+{"level":"error","message":"[Synctables] Error crítico: "}
+{"level":"error","message":"[MVsync] Error crítico: Error en sincronización: "}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Synctables] Procesando 1281 registros"}
+{"level":"error","message":"[Synctables] Error crítico: "}
+{"level":"error","message":"[MVsync] Error crítico: Error en sincronización: "}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 1287 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción completada"}
+{"level":"info","message":"[MVsync] Insertados 1287 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 2: 287 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 1287/1287"}
+{"level":"info","message":"[MVsync] Proceso finalizado! :)"}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Synctables] Iniciando con 149 registros"}
+{"level":"error","message":"[Synctables] Error detallado: {\"message\":\"\"}"}
+{"level":"error","message":"[MVsync] Error crítico: Error en Synctables: "}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Synctables] Iniciando con 159 registros"}
+{"level":"error","message":"[Synctables] Error detallado: {\"message\":\"\"}"}
+{"level":"error","message":"[MVsync] Error crítico: Error en Synctables: "}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"error","message":"[MVsync] Error crítico: Synctables is not a function"}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 161 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Finalizado. Insertados: 161, Duplicados omitidos: 0"}
+{"level":"info","message":"[MVsync] Insertados 161 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 161 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 161/161"}
+{"level":"info","message":"[MVsync] Proceso finalizado! :)"}

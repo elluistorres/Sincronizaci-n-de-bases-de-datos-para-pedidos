@@ -1,0 +1,70 @@
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 21799 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción completada"}
+{"level":"info","message":"[MVsync] Insertados 21799 registros en destino"}
+{"level":"error","message":"[MVsync] Error crítico: Timeout: Request failed to complete in 15000ms"}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 21877 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción completada"}
+{"level":"info","message":"[MVsync] Insertados 21877 registros en destino"}
+{"level":"error","message":"[MVsync] Error crítico: ids is not defined"}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 21899 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción completada"}
+{"level":"info","message":"[MVsync] Insertados 21899 registros en destino"}
+{"level":"error","message":"[MVsync] Error crítico: ids is not defined"}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 21925 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción completada"}
+{"level":"info","message":"[MVsync] Insertados 21925 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 2: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 3: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 4: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 5: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 6: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 7: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 8: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 9: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 10: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 11: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 12: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 13: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 14: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 15: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 16: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 17: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 18: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 19: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 20: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 21: 1000 borrados"}
+{"level":"info","message":"[MVsync] Lote 22: 925 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 21925/21925"}
