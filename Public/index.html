@@ -94,11 +94,13 @@
           <th class="text-nowrap">Venta</th>
           <th class="text-nowrap">Proceso de envio</th>
           <th class="text-nowrap">Status Entrega</th>
+          <th class="text-nowrap">Vales pendientes</th>
+          <th class="text-nowrap">Status Vales</th>
         </tr>
       </thead>
       <tbody id="tableBody">
         <tr>
-          <td colspan="11" class="text-center">Ingrese criterios de búsqueda</td>
+          <td colspan="13" class="text-center">Ingrese criterios de búsqueda</td>
         </tr>
       </tbody>
     </table>
@@ -144,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
       const response = await axios.get('/search', { params: searchParams });
       const resultados = response.data;
+      console.log('Datos recibidos del backend:', resultados);
       const tbody = document.getElementById('tableBody');
       
       // Limpiar y llenar tabla
@@ -161,10 +164,12 @@ document.addEventListener('DOMContentLoaded', function() {
             <td>${registro.status || '-'}</td>
             <td>${registro.statusbor || '-'}</td>
             <td>${registro.statusEntrega || '-'}</td>
+            <td>${registro.valesPendientes || '-'}</td>
+            <td>${registro.statusVale || '-'}</td>
           </tr>
         `).join('') : `
           <tr>
-            <td colspan="11" class="text-center">No se encontraron resultados</td>
+            <td colspan="13" class="text-center">No se encontraron resultados</td>
           </tr>
         `;
         
@@ -172,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Error:', error);
       document.getElementById('tableBody').innerHTML = `
         <tr>
-          <td colspan="11" class="text-center text-danger">
+          <td colspan="13" class="text-center text-danger">
             Error: ${error.response?.data?.message || error.message}
           </td>
         </tr>

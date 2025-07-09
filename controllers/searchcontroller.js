@@ -2,6 +2,7 @@ const logger = require('../logger');
 const functionName = 'Buscar registros';
 //funcion secundaria inserción
 const { Estatustlmkw, Op } = require('../models/mysqlwork');
+const { sequelize } = require('../dbconections/db');
 
 
 logger.info(`[${functionName}] Iniciando proceso...`);
@@ -71,7 +72,47 @@ if (fecha1 && fecha2) {
       // Si no hay con valor, toma el primero que esté vacío
       filtrados.push(conEntrega || grupo.find(r => !r.statusEntrega || r.statusEntrega.trim() === ''));
     }
-    return filtrados;
+
+     // Enriquecer con datos de tabla VALES
+     const resultadosFinales = [];
+
+     for (const registroSequelize of filtrados) {
+      const registro = registroSequelize.get({ plain: true });
+      try {
+        const vales = await sequelize.query(`
+          SELECT VAL_NUMERO, VAL_STATUS 
+          FROM VALES 
+          WHERE VAL_DOCORIGINAL = :docto 
+            AND VAL_SERIEORIGINAL = :serie 
+            AND VAL_STATUS IN ('A','P') AND VAL_BORRADO <> '*'
+        `, {
+          replacements: {
+            docto: registro.docto,
+            serie: registro.serie
+          },
+          type: sequelize.QueryTypes.SELECT
+        });
+        console.log(vales) 
+    
+        registro.valesPendientes = vales.length > 0
+          ? vales.map(v => v.VAL_NUMERO).join(', ')
+          : null;
+    
+        registro.statusVale = vales.length > 0
+          ? vales.map(v => v.VAL_STATUS).join(', ')
+          : null;
+    
+        resultadosFinales.push(registro);
+    
+      } catch (err) {
+        logger.warn(`Error al consultar VALES para ${registro.docto}-${registro.serie}:`, err);
+        registro.valesPendientes = null;
+        registro.statusVale = null;
+        resultadosFinales.push(registro);
+      }
+    }
+     // ✅ Este es el único return necesario
+     return resultadosFinales;
         
    } catch (error) {
     logger.error(`[${functionName}] Error al buscar registros:`, error);
