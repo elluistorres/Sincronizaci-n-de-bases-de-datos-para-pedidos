@@ -44,6 +44,11 @@ const { sequelizesqlw } = require('../dbconections/db');
         allowNull: true,  // Allow null explicitly
         
       },
+      chofer: {
+        type: DataTypes.STRING(50),
+        allowNull: true,  // Allow null explicitly
+        
+      },
       statusbor: {
         type: DataTypes.STRING(50),
         allowNull: true,  // Allow null explicitly
@@ -64,17 +69,13 @@ const { sequelizesqlw } = require('../dbconections/db');
       tableName: 'estatustlmk',
       timestamps: false // ajusta según necesites
     })
-  
-    async function testModel() {
-        try {
-          await Estatustlmkw.sync({ force: false, alter: true }); 
-          console.log('Modelo sincronizado correctamente.');
-        } catch (error) {
-          console.error('Error al sincronizar el modelo:', error);
-        }
-      }
-      
-      testModel();
     
     module.exports = {Estatustlmkw, Op};
  
+    Estatustlmkw.sync({ alter: true })
+  .then(() => {
+    console.log("La tabla 'estatustlmk' fue actualizada correctamente con el nuevo campo chofer ✅");
+  })
+  .catch(err => {
+    console.error("Error actualizando la tabla:", err);
+  });

@@ -3,19 +3,23 @@
 {"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
 {"level":"info","message":"servidor corriendo"}
 {"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
 {"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 623 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Finalizado. Insertados: 623, Duplicados omitidos: 0"}
+{"level":"info","message":"[MVsync] Insertados 623 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 623 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 623/623"}
+{"level":"info","message":"[MVsync] Proceso finalizado! :)"}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
 {"level":"info","message":"servidor corriendo"}
 {"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
 {"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"[conexión a SQLSERVER] Conexión establecida correctamente."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Conexión establecida correctamente."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}

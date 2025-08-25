@@ -5,8 +5,9 @@ const { Estatustlmkw, Op } = require('../models/mysqlwork');
 const { sequelize } = require('../dbconections/db');
 
 
-logger.info(`[${functionName}] Iniciando proceso...`);
+
 async function searchRecords(filters) {
+  logger.info(`[${functionName}] Iniciando proceso...`);
   const { docto, serie, fecha1, fecha2 } = filters;
   
   // Validación backend
@@ -78,7 +79,44 @@ if (fecha1 && fecha2) {
 
      for (const registroSequelize of filtrados) {
       const registro = registroSequelize.get({ plain: true });
+
       try {
+    // ✅ Consulta única con CASE
+    const [estatus] = await sequelize.query(`
+      SELECT 
+        CASE
+          WHEN EXISTS (
+            SELECT 1 
+            FROM SD2010 
+            WHERE D2_SERIE = :serie 
+              AND D2_DOC = :docto
+          ) THEN 'VENTA REALIZADA'
+          WHEN EXISTS (
+            SELECT 1 
+            FROM SEA010 
+            WHERE EA_PREFIXO = :serie 
+              AND EA_NUM = :docto 
+              AND EA_NUMBOR = :numbor
+          ) THEN 'EN PROCESO DE ENTREGA'
+          WHEN EXISTS (
+            SELECT 1 
+            FROM OF_BORDERO 
+            WHERE NUMBOR = :numbor
+          ) THEN 'ENTREGADO'
+          ELSE NULL
+        END AS statusGeneral
+    `, {
+      replacements: { 
+        serie: registro.serie, 
+        docto: registro.docto, 
+        numbor: registro.numbor 
+      },
+      type: sequelize.QueryTypes.SELECT
+    });
+
+
+    registro.statusGeneral = estatus?.statusGeneral || null;
+//CONSULTA DE VALES
         const vales = await sequelize.query(`
           SELECT VAL_NUMERO, VAL_STATUS 
           FROM VALES 
@@ -92,7 +130,7 @@ if (fecha1 && fecha2) {
           },
           type: sequelize.QueryTypes.SELECT
         });
-        console.log(vales) 
+       // console.log(vales) 
     
         registro.valesPendientes = vales.length > 0
           ? vales.map(v => v.VAL_NUMERO).join(', ')

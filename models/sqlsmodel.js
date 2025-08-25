@@ -43,6 +43,11 @@ const { sequelize } = require('../dbconections/db');
         allowNull: true,  // Allow null explicitly
         
       },
+      chofer: {
+        type: DataTypes.STRING(50),
+        allowNull: true,  // Allow null explicitly
+        
+      },
       statusbor: {
         type: DataTypes.STRING(50),
         allowNull: true,  // Allow null explicitly

@@ -25,7 +25,7 @@ async function Synctables(registros) {
             } duplicados en el lote recibido`);
         }
 
-        // Paso 2: Verificación en BD (manteniendo tu lógica actual)
+        // Paso 2: Verificación en BD
         const idsUnicos = registrosUnicos.map(r => r.id);
         const existentes = await Estatustlmkw.findAll({
             attributes: ['id'],
@@ -48,6 +48,7 @@ async function Synctables(registros) {
                 cliente: registro.cliente,
                 status: registro.status,
                 numbor: registro.numbor,
+                chofer: registro.chofer,
                 statusbor: registro.statusbor,
                 statusEntrega: registro.statusEntrega      
             });

@@ -1,6 +1,4 @@
 const express = require('express');
-const logger = require('../../logger.js');
-const functionName = 'Busqueda';
 const router = express.Router();
 const path = require('path');
 const { MVsync } = require('../../controllers/sqlServerdatos.js');

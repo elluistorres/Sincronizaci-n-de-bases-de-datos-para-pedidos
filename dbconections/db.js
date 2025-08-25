@@ -52,17 +52,7 @@ try {
   logger.error(`[${functionName2}] Error al configurar Sequelize: ${error.message}`);
   throw error;
 }
-async function testConnection() {
-  try {
-    await sequelize.authenticate();
-    logger.info(`[${functionName}] Conexión establecida correctamente.`);
-    logger.info(`[${functionName2}] Conexión establecida correctamente.`);
-  } catch (error) {
-    logger.error(`[${functionName}] Error de conexión: ${error.message}`);
-    logger.error(`[${functionName2}] Error de conexión: ${error.message}`);
-  }
-}
-testConnection();
+
 module.exports = {
   sequelize,
   sequelizesqlw
