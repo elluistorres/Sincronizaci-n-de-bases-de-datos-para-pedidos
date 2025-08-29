@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const { MVsync } = require('../../controllers/sqlServerdatos.js');
-const { searchRecords } = require('../../controllers/searchcontroller.js');
+const { MVsync } = require('../controllers/sqlServerdatos.js');
+const { searchRecords } = require('../controllers/searchcontroller.js');
+const {valesinfocontroller} = require('../controllers/valesinfocontroller.js');
 // Ruta principal (http://localhost:8000/)
 
 
@@ -28,6 +29,22 @@ router.get('/search', async (req, res) => {
   }
 });
 
+
+// Vista
+router.get('/valesdetalle/:vale/:filial/:docto/:serie', (req, res) => {
+  res.sendFile(path.join(__dirname, '../Public/views/valesdetalle.html'));
+});
+
+// API
+router.get('/api/valesdetalle/:vale/:filial/:docto/:serie', async (req, res) => {
+  try {
+    const { vale, filial, docto, serie } = req.params;
+    const resultados = await valesinfocontroller(vale, filial, docto, serie);
+    res.json({ success: true, data: resultados });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
 /*
 router.get('/search', async (req, res) => {
   logger.info(`[${functionName}] Iniciando proceso...`);

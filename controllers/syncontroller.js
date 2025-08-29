@@ -1,10 +1,11 @@
 const logger = require('../logger');
+const functionName = 'sincronización';
 // Debe ser así (sin llaves {} si el export es directo):
 // Importa el objeto y extrae el modelo
 const { Estatustlmkw } = require('../models/mysqlwork.js');
-
 //funcion secundaria inserción
 //Paso 1: Primero valido que se halla recibido el arreglo desde la funcion principal de manera correcta.
+logger.info(`[${functionName}] Validación de campos`);
 async function Synctables(registros) {
     if (!registros || !Array.isArray(registros)) {
         throw new Error('Se esperaba un array de registros');
@@ -24,7 +25,7 @@ async function Synctables(registros) {
                 registros.length - registrosUnicos.length
             } duplicados en el lote recibido`);
         }
-
+logger.info(`[${functionName}] Verificación de campos duplicados en base`);
         // Paso 2: Verificación en BD
         const idsUnicos = registrosUnicos.map(r => r.id);
         const existentes = await Estatustlmkw.findAll({
@@ -32,7 +33,7 @@ async function Synctables(registros) {
             where: { id: idsUnicos }
         });
         const idsExistentes = existentes.map(r => r.id);
-
+logger.info(`[${functionName}] Inserción de campos`);
         // Paso 3: Inserción (sin cambios)
         const registrosNuevos = registrosUnicos.filter(r => !idsExistentes.includes(r.id));
         let insertedCount = 0;

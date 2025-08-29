@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'Public'))); // Solo la carpeta Publ
 logger.info("servidor corriendo");
 
 // Routers
-const viewsRouter = require('./Public/routes/index.js');
+const viewsRouter = require('./routes/index');
 //const apiRouter = require('./Public/routes/index.js');
 
 app.use('/', viewsRouter);       // Rutas de vistas (HTML)

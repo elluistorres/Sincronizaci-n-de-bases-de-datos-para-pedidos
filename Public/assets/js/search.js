@@ -41,26 +41,37 @@ document.addEventListener('DOMContentLoaded', function() {
             loadingMessage.classList.add('d-none');
 
             if (resultados.length > 0) {
-                // Llenar la tabla con los resultados
-                tableBody.innerHTML = resultados.map((registro, index) => `
-                    <tr>
-                        <td>${index + 1}</td>
-                        <td>${registro.filial || '-'}</td>
-                        <td>${registro.pedido || '-'}</td>
-                        <td>${registro.docto || '-'}</td>
-                        <td>${registro.serie || '-'}</td>
-                        <td>${registro.emision || '-'}</td>
-                        <td>${registro.cliente || '-'}</td>
-                        <td>${registro.numbor || '-'}</td>
-                         <td>${registro.chofer || '-'}</td>
-                        <td>${registro.valesPendientes || '-'}</td>
-                        <td>${registro.statusGeneral || '-'}</td>
-                    </tr>
-                `).join('');
-            } else {
-                // Mostrar mensaje de no resultados
-                noResultsMessage.classList.remove('d-none');
-            }
+    // Llenar la tabla con los resultados
+    tableBody.innerHTML = resultados.map((registro, index) => {
+        console.log('Vales pendientes para registro:', registro.docto, registro.serie, registro.valesPendientes);
+
+        return `
+          <tr>
+            <td>${index + 1}</td>
+            <td>${registro.filial || '-'}</td>
+            <td>${registro.pedido || '-'}</td>
+            <td>${registro.docto || '-'}</td>
+            <td>${registro.serie || '-'}</td>
+            <td>${registro.emision || '-'}</td>
+            <td>${registro.cliente || '-'}</td>
+            <td>${registro.numbor || '-'}</td>
+            <td>${registro.chofer || '-'}</td>
+            <td>
+            ${registro.valesPendientes && registro.valesPendientes.length > 0 
+              ? registro.valesPendientes.map(vale => 
+                  `<a href="/valesdetalle/${vale}/${registro.filial}/${registro.docto}/${registro.serie}" target="_blank">${vale}</a>`
+                ).join('<br>')
+              : '-'}
+            </td>
+            <td>${registro.statusGeneral || '-'}</td>
+          </tr>
+        `;
+    }).join('');
+} else {
+    // Mostrar mensaje de no resultados
+    noResultsMessage.classList.remove('d-none');
+}
+
         } catch (error) {
             // Manejo de errores
             loadingMessage.classList.add('d-none');

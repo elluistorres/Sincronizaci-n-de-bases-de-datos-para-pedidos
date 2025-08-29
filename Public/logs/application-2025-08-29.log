@@ -1,0 +1,344 @@
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 314 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Verificación de campos duplicados en base"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción de campos"}
+{"level":"info","message":"[insertarEnOtraTabla] Finalizado. Insertados: 314, Duplicados omitidos: 0"}
+{"level":"info","message":"[MVsync] Insertados 314 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 314 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 314/314"}
+{"level":"info","message":"[MVsync] Proceso finalizado! :)"}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
