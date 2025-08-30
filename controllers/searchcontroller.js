@@ -43,82 +43,65 @@ async function searchRecords(filters) {
   try {
     const results = await Estatustlmkw.findAll({
       where: whereClause,
-      order: [['emision', 'DESC']]
+      order: [['id', 'DESC']]
     });
 
-    const resultadosFinales = [];
+   const resultadosFinales = await Promise.all(
+  results.map(async (registroSequelize) => {
+    const registro = registroSequelize.get({ plain: true });
 
-    logger.info(`[${functionName}] Selección de status por medio de casos.`);
+    try {
+      const [estatus, vales] = await Promise.all([
+        sequelize.query(`
+    SELECT CASE
+      WHEN EXISTS (
+        SELECT 1 
+        FROM SD2010 
+        WHERE D2_SERIE = :serie AND D2_DOC = :docto
+      ) THEN 'VENTA REALIZADA'
+      WHEN EXISTS (
+        SELECT 1 
+        FROM SEA010 
+        WHERE EA_PREFIXO = :serie AND EA_NUM = :docto AND EA_NUMBOR = :numbor
+      ) THEN 'EN PROCESO DE ENTREGA'
+      WHEN EXISTS (
+        SELECT 1 
+        FROM OF_BORDERO 
+        WHERE NUMBOR = :numbor
+      ) THEN 'ENTREGADO'
+      ELSE NULL
+    END AS statusGeneral
+  `, {
+    replacements: { serie: registro.serie, docto: registro.docto, numbor: registro.numbor },
+    type: QueryTypes.SELECT
+  }),
+  sequelize.query(`
+    SELECT VAL_NUMERO, VAL_STATUS 
+    FROM VALES 
+    WHERE VAL_DOCORIGINAL = :docto 
+      AND VAL_SERIEORIGINAL = :serie 
+      AND VAL_STATUS IN ('A','P') 
+      AND VAL_BORRADO <> '*'
+  `, {
+    replacements: { docto: registro.docto, serie: registro.serie },
+    type: QueryTypes.SELECT
+  })
+]);
+      registro.statusGeneral = estatus[0]?.statusGeneral || null;
+      registro.valesPendientes = vales.map(v => v.VAL_NUMERO);
+      registro.statusVale = vales.map(v => v.VAL_STATUS);
 
-    for (const registroSequelize of results) {
-      const registro = registroSequelize.get({ plain: true });
-
-      try {
-        // ✅ Consulta única con CASE
-        const [estatus] = await sequelize.query(`
-          SELECT 
-            CASE
-              WHEN EXISTS (
-                SELECT 1 
-                FROM SD2010 
-                WHERE D2_SERIE = :serie 
-                  AND D2_DOC = :docto
-              ) THEN 'VENTA REALIZADA'
-              WHEN EXISTS (
-                SELECT 1 
-                FROM SEA010 
-                WHERE EA_PREFIXO = :serie 
-                  AND EA_NUM = :docto 
-                  AND EA_NUMBOR = :numbor
-              ) THEN 'EN PROCESO DE ENTREGA'
-              WHEN EXISTS (
-                SELECT 1 
-                FROM OF_BORDERO 
-                WHERE NUMBOR = :numbor
-              ) THEN 'ENTREGADO'
-              ELSE NULL
-            END AS statusGeneral
-        `, {
-          replacements: { 
-            serie: registro.serie, 
-            docto: registro.docto, 
-            numbor: registro.numbor 
-          },
-          type: QueryTypes.SELECT
-        });
-
-
-        registro.statusGeneral = estatus?.statusGeneral || null;
-
-
-        // ✅ Consulta de VALES
-        const vales = await sequelize.query(`
-          SELECT VAL_NUMERO, VAL_STATUS 
-          FROM VALES 
-          WHERE VAL_DOCORIGINAL = :docto 
-            AND VAL_SERIEORIGINAL = :serie 
-            AND VAL_STATUS IN ('A','P') 
-            AND VAL_BORRADO <> '*'
-        `, {
-          replacements: {
-            docto: registro.docto,
-            serie: registro.serie
-          },
-          type: QueryTypes.SELECT
-        });
-    
-registro.valesPendientes = vales.map(v => v.VAL_NUMERO);
-registro.statusVale = vales.map(v => v.VAL_STATUS);
-
-
-        resultadosFinales.push(registro);
-      } catch (err) {
-        logger.warn(`Error al consultar VALES para ${registro.docto}-${registro.serie}: ${err.message}`);
-        registro.valesPendientes = null;
-        registro.statusVale = null;
-        resultadosFinales.push(registro);
-      }
+    } catch (err) {
+      logger.warn(`Error en consultas para ${registro.docto}-${registro.serie}: ${err.message}`);
+      registro.statusGeneral = null;
+      registro.valesPendientes = null;
+      registro.statusVale = null;
     }
+
+    return registro;
+  })
+);
+
 logger.info(`[${functionName}] Vales obtenidos`);
 logger.info(`[${functionName}] Función finalizada.`);
     return resultadosFinales;

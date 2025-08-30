@@ -342,3 +342,18 @@
 {"level":"info","message":"[Buscar registros] Vales obtenidos"}
 {"level":"info","message":"[Buscar registros] Función finalizada."}
 {"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"[sincronización] Validación de campos"}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] Selección de status por medio de casos."}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
