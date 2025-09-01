@@ -5,8 +5,9 @@ const functionName = 'sincronización';
 const { Estatustlmkw } = require('../models/mysqlwork.js');
 //funcion secundaria inserción
 //Paso 1: Primero valido que se halla recibido el arreglo desde la funcion principal de manera correcta.
-logger.info(`[${functionName}] Validación de campos`);
+
 async function Synctables(registros) {
+    logger.info(`[${functionName}] Validación de campos`);
     if (!registros || !Array.isArray(registros)) {
         throw new Error('Se esperaba un array de registros');
     }

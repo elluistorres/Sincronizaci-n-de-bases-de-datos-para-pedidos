@@ -71,11 +71,3 @@ const { sequelizesqlw } = require('../dbconections/db');
     })
     
     module.exports = {Estatustlmkw, Op};
- 
-    Estatustlmkw.sync({ alter: true })
-  .then(() => {
-    console.log("La tabla 'estatustlmk' fue actualizada correctamente con el nuevo campo chofer ✅");
-  })
-  .catch(err => {
-    console.error("Error actualizando la tabla:", err);
-  });
