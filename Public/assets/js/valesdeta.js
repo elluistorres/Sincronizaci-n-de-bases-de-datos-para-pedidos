@@ -1,43 +1,69 @@
-async function cargarValesDetalle() {
-  const pathParts = window.location.pathname.split("/"); 
-  const vale = pathParts[2];
-  const filial = pathParts[3];
-  const docto = pathParts[4];
-  const serie = pathParts[5];
+// La función ahora acepta parámetros
+async function cargarValesDetalle(vale, filial, docto, serie) {
 
-  console.log("Parametros URL:", vale, filial, docto, serie); // 🔍 Debug
+    // Referencias al modal y al contenedor
+    const detalleModal = new bootstrap.Modal(document.getElementById('detalleModal'));
+    const modalTableContainer = document.getElementById('modal-table-container');
 
-  const response = await fetch(`/api/valesdetalle/${vale}/${filial}/${docto}/${serie}`);
-  const data = await response.json();
-
-  const contenedor = document.getElementById("valesDetalleContainer");
-
-  if (data.success && data.data.length > 0) {
-    let tabla = `
-      <table border="1" cellpadding="5" cellspacing="0">
-        <tr>
-          <th>Vale</th>
-          <th>Descripción</th>
-          <th>Pendiente</th>
-        </tr>
+    // Limpiar y mostrar un mensaje de carga dentro del modal
+    modalTableContainer.innerHTML = `
+        <div class="text-center py-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <p class="mt-2 text-muted">Cargando detalle del vale...</p>
+        </div>
     `;
 
-    data.data.forEach(item => {
-      tabla += `
-        <tr>
-          <td>${item.VAL_NUMERO}</td>
-          <td>${item.VAD_DESCRIPCION}</td>
-          <td>${item.PENDIENTE}</td>
-        </tr>
-      `;
-    });
+    // Muestra el modal ANTES de la petición
+    detalleModal.show();
 
-    tabla += "</table>";
-    contenedor.innerHTML = tabla;
-  } else {
-    contenedor.innerHTML = "<p>No se encontraron datos.</p>";
-  }
+    try {
+        // Realizar la petición al servidor
+        const response = await fetch(`/api/valesdetalle/${vale}/${filial}/${docto}/${serie}`);
+        const data = await response.json();
+
+        if (data.success && data.data.length > 0) {
+            // Pinta la tabla de resultados directamente en el modal
+            const tablaHTML = `
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Vale</th>
+                                <th>Descripción</th>
+                                <th>Pendiente</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.data.map(item => `
+                                <tr>
+                                    <td>${item.VAL_NUMERO}</td>
+                                    <td>${item.VAD_DESCRIPCION}</td>
+                                    <td>${item.PENDIENTE}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            modalTableContainer.innerHTML = tablaHTML;
+
+        } else {
+            // Muestra un mensaje si no hay datos
+            modalTableContainer.innerHTML = `
+                <div class="alert alert-info" role="alert">
+                    No se encontraron datos para este vale.
+                </div>
+            `;
+        }
+    } catch (error) {
+        console.error("Error al cargar detalle del vale:", error);
+        // Muestra un mensaje de error
+        modalTableContainer.innerHTML = `
+            <div class="alert alert-danger" role="alert">
+                Hubo un error al cargar los datos. Por favor, inténtelo de nuevo.
+            </div>
+        `;
+    }
 }
-
-document.addEventListener("DOMContentLoaded", cargarValesDetalle);
-

@@ -135,3 +135,10 @@ vertical-align: middle; /*Alinea verticalmente el logo con el texto */
 display: flex; /*Utiliza flex para alinear el icono y el texto*/
 align-items: center; /*Centra verticalmente los elementos */
 }
+
+#docto{
+  text-transform: uppercase;
+}
+#serie{
+  text-transform: uppercase;
+}
