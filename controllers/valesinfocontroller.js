@@ -5,13 +5,11 @@ const { sequelize } = require('../dbconections/db');
 const logger = require('../logger');
 const functionName = 'Vales detalle';
 
-  
-
 
 async function valesinfocontroller(vale, filial, docto, serie) {
   logger.info(`[${functionName}] Iniciando proceso...`);
   try {
-    console.log("📥 Parámetros recibidos en valesinfocontroller:", { vale, filial, docto, serie });
+    console.log("Parámetros recibidos en valesinfocontroller:", { vale, filial, docto, serie });
 
     const resultados = await sequelize.query(`
       SELECT 
