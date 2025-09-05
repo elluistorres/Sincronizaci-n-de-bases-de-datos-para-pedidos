@@ -3,43 +3,36 @@ const functionName = 'Buscar registros';
 
 // Modelos y conexión
 const { Estatustlmkw, Op } = require('../models/mysqlwork');
-const { QueryTypes } = require('sequelize'); 
+const { QueryTypes } = require('sequelize');
 const { sequelize } = require('../dbconections/db');
 
 async function searchRecords(filters) {
     logger.info(`[${functionName}] Iniciando proceso...`);
-    const { docto, serie, numbor, fecha1, fecha2 } = filters;
-    
+    const { docto, serie, fecha1, fecha2 } = filters;
+
     // --- Lógica de Validación Mejorada ---
     logger.info(`[${functionName}] Validación de campos`);
-    
-    // Validar que al menos uno de los campos principales de búsqueda esté presente
-    if (!serie && !numbor) {
-        throw new Error('Debe proporcionar un número de Serie o de Bordero.');
+
+    if (!serie) {
+        throw new Error('Debe proporcionar un número de Serie.');
     }
-    
-    // Si se busca por Serie, las fechas son obligatorias
-    if (serie && (!fecha1 && !fecha2)) {
-        throw new Error('Para buscar por Serie, debe seleccionar un rango de fechas.');
+
+    if (!docto && (!fecha1 && !fecha2)) {
+        throw new Error('Para buscar por Serie sin folio, debe seleccionar un rango de fechas.');
     }
-    
+
     // --- Construcción Dinámica del WHERE ---
     logger.info(`[${functionName}] Construcción dinámica del WHERE`);
     let whereClause = {};
 
-    if (numbor) {
-        whereClause.numbor = numbor;
-    } 
-    else if (serie) {
-        whereClause.serie = serie;
+    whereClause.serie = serie;
 
-        if (docto) {
-            whereClause.docto = docto;
-        }
+    if (docto) {
+        whereClause.docto = docto;
+    } else {
 
         logger.info(`[${functionName}] Formateo de fecha.`);
         const formatearFecha = (fecha) => fecha.replaceAll('-', '');
-
         if (fecha1 && fecha2) {
             whereClause.emision = { [Op.between]: [formatearFecha(fecha1), formatearFecha(fecha2)] };
         } else if (fecha1) {
@@ -50,60 +43,45 @@ async function searchRecords(filters) {
     }
 
     logger.info(`[${functionName}] Funcion de busqueda.`);
-try {
-    let queryOptions = {
-        where: whereClause,
-        order: [['id', 'DESC']]
-    };
+    try {
+        let queryOptions = {
+            where: whereClause,
+            order: [['id', 'DESC']]
+        };
 
-    // Si se busca por Bordero o Serie/Docto, agrupamos los resultados para evitar duplicados.
-    if (numbor || serie) {
-        queryOptions.group = ['docto', 'serie', 'id'];
+        // NOTA: Manejamos los duplicados manualmente.
         queryOptions.attributes = [
-            'id', 'filial', 'pedido', 'docto', 'serie', 'emision', 'cliente', 'numbor', 
-            'chofer', 'statusEntrega', 'statusbor', 'status' // Asegúrate de incluir estas
+            'id', 'filial', 'pedido', 'docto', 'serie', 'emision', 'cliente', 'numbor',
+            'chofer', 'statusEntrega', 'statusbor', 'status'
         ];
-    }
-    
-    const results = await Estatustlmkw.findAll(queryOptions);
 
-    // --- Lógica de Priorización de Resultados si se busca por Bordero ---
-    let resultadosAFiltrar = results;
-    if (numbor) {
-        logger.info(`[${functionName}] Se busca por bordero, aplicando lógica de priorización.`);
-        
-        // 1. Prioridad: `estatusEntrega`
-        let priorizados = resultadosAFiltrar.filter(r => r.get('statusEntrega'));
-        if (priorizados.length > 0) {
-            resultadosAFiltrar = priorizados;
-        } else {
-            // 2. Prioridad: `statusbor` (si no hay `estatusEntrega`)
-            priorizados = resultadosAFiltrar.filter(r => r.get('statusbor'));
-            if (priorizados.length > 0) {
-                resultadosAFiltrar = priorizados;
-            } else {
-                // 3. Última prioridad: `status` (si no hay `estatusEntrega` ni `statusbor`)
-                priorizados = resultadosAFiltrar.filter(r => r.get('status'));
-                if (priorizados.length > 0) {
-                    resultadosAFiltrar = priorizados;
-                }
+        const results = await Estatustlmkw.findAll(queryOptions);
+
+        // --- Lógica para filtrar y obtener solo el registro más reciente ---
+        const resultadosUnicos = {};
+
+        results.forEach(registroSequelize => {
+            const registro = registroSequelize.get({ plain: true });
+            const claveUnica = `${registro.serie}-${registro.docto}-${registro.numbor}`;
+
+            // Si no existe la clave, o si el ID del nuevo registro es mayor, lo guarda
+            if (!resultadosUnicos[claveUnica] || registro.id > resultadosUnicos[claveUnica].id) {
+                resultadosUnicos[claveUnica] = registro;
             }
-        }
-        logger.info(`[${functionName}] ${resultadosAFiltrar.length} registros después de la priorización.`);
-    }
+        });
 
+        // Convertir el objeto de resultados únicos a un array
+        const registrosFiltrados = Object.values(resultadosUnicos);
+        logger.info(`[${functionName}] ${registrosFiltrados.length} registros únicos encontrados.`);
 
-        logger.info(`[${functionName}] Funcion de promesas con status de venta y vales pendientes`);
-        // CAMBIO CRÍTICO: Usamos 'resultadosAFiltrar' en lugar de 'results'
+        logger.info(`[${functionName}] Funcion de promesa con status de venta y vales pendientes`);
         const resultadosFinales = await Promise.all(
-            resultadosAFiltrar.map(async (registroSequelize) => {
-                const registro = registroSequelize.get({ plain: true });
-
+            registrosFiltrados.map(async (registro) => {
                 try {
                     const [estatus, vales] = await Promise.all([
                         sequelize.query(`
                             SELECT CASE
-                            WHEN EXISTS ( 
+                            WHEN EXISTS (
                                 SELECT 1 FROM OF_BORDERO WHERE NUMBOR = :numbor
                             ) THEN 'ENTREGADO'
                             WHEN EXISTS (
@@ -119,11 +97,11 @@ try {
                             type: QueryTypes.SELECT
                         }),
                         sequelize.query(`
-                            SELECT VAL_NUMERO, VAL_STATUS 
-                            FROM VALES 
-                            WHERE VAL_DOCORIGINAL = :docto 
-                                AND VAL_SERIEORIGINAL = :serie 
-                                AND VAL_STATUS IN ('A') 
+                            SELECT VAL_NUMERO, VAL_STATUS
+                            FROM VALES
+                            WHERE VAL_DOCORIGINAL = :docto
+                                AND VAL_SERIEORIGINAL = :serie
+                                AND VAL_STATUS IN ('A')
                                 AND VAL_BORRADO <> '*'
                         `, {
                             replacements: { docto: registro.docto, serie: registro.serie },

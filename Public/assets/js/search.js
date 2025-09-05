@@ -24,27 +24,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchParams = {
             docto: document.getElementById('docto').value.trim(),
             serie: document.getElementById('serie').value.trim(),
-            numbor: document.getElementById('numbor').value.trim(), // Nuevo campo
             fecha1: document.getElementById('fecha1').value,
             fecha2: document.getElementById('fecha2').value
         };
 
-        // Lógica de validación mejorada
-        const hasSeriesOrDocto = searchParams.serie || searchParams.docto;
-        const hasNumbor = searchParams.numbor;
-        const hasDates = searchParams.fecha1 && searchParams.fecha2;
-        
-        // Si no se ha ingresado nada en serie, docto o bordero, no se puede buscar.
-        if (!hasSeriesOrDocto && !hasNumbor) {
-            alert('Por favor, ingrese un número de Serie, Documento o Bordero.');
-            return;
-        }
+      // Lógica de validación
+const hasDocto = !!searchParams.docto;
+const hasSerie = !!searchParams.serie;
+const hasDates = searchParams.fecha1 && searchParams.fecha2;
 
-        // Si se busca por serie/docto, las fechas son obligatorias.
-        if (hasSeriesOrDocto && !hasDates) {
-            alert('Para buscar por Serie o Documento, debe seleccionar un rango de fechas.');
-            return;
-        }
+// Caso 1: Si busca por Serie + Docto (folio completo) → válido SIN fechas
+if (hasSerie && hasDocto) {
+    // válido, no pedimos fechas
+}
+// Caso 2: Si busca SOLO por Serie o SOLO por Docto → deben venir las fechas
+else if ((hasSerie || hasDocto) && !hasDates) {
+    alert('Para buscar por Serie o Documento, debe seleccionar un rango de fechas.');
+    return;
+}
+// Caso 3: Si no puso ni Serie ni Docto → error
+else if (!hasSerie && !hasDocto) {
+    alert('Debe ingresar al menos Serie o Documento.');
+    return;
+}
 
         // Mostrar carga y ocultar otros mensajes
         loadingMessage.classList.remove('d-none');
@@ -97,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // --- LÍNEAS AGREGADAS PARA BORRAR LOS INPUTS ---
     document.getElementById('docto').value = '';
     document.getElementById('serie').value = '';
-    document.getElementById('numbor').value = '';
     document.getElementById('fecha1').value = '';
     document.getElementById('fecha2').value = '';
 
