@@ -4,7 +4,7 @@ const { Synctables } = require('./syncontroller.js');
 const { sequelize } = require('../dbconections/db');
 
 async function MVsync() {
-  const functionName = 'MVsync';
+  const functionName = 'MVsync'; // ✅ Declarada al inicio de la función
   logger.info(`[${functionName}] Iniciando proceso...`);
   
   const transaction = await sequelize.transaction();
@@ -12,7 +12,14 @@ async function MVsync() {
   try {
     // 1. Obtener registros
     const registros = await Estatustlmk.findAll({ transaction });
+    // Log de los primeros registros para ver fechaEntrega
+registros.forEach((r, i) => {
+  if (i < 5) { // solo los primeros 5 para no saturar
+    console.log(`[MVsync] Registro ${i}: id=${r.id}, fechaEntrega=${r.fechaEntrega}`);
+  }
+});
     if (registros.length === 0) {
+      logger.info(`[${functionName}] No hay datos por sincronizar.`);
       await transaction.commit();
       return { success: true, message: "No había datos para sincronizar", count: 0 };
     }

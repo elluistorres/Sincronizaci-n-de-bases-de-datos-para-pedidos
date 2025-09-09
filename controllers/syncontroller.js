@@ -1,5 +1,4 @@
 const logger = require('../logger');
-const functionName = 'sincronización';
 // Debe ser así (sin llaves {} si el export es directo):
 // Importa el objeto y extrae el modelo
 const { Estatustlmkw } = require('../models/mysqlwork.js');
@@ -7,7 +6,6 @@ const { Estatustlmkw } = require('../models/mysqlwork.js');
 //Paso 1: Primero valido que se halla recibido el arreglo desde la funcion principal de manera correcta.
 
 async function Synctables(registros) {
-    logger.info(`[${functionName}] Validación de campos`);
     if (!registros || !Array.isArray(registros)) {
         throw new Error('Se esperaba un array de registros');
     }
@@ -40,6 +38,7 @@ logger.info(`[${functionName}] Inserción de campos`);
         let insertedCount = 0;
 
         for (const registro of registrosNuevos) {
+            console.log(`[Synctables] Insertando id=${registro.id}, fechaEntrega=${registro.fechaEntrega}`);
             await Estatustlmkw.create({
                 id: registro.id,
                 filial: registro.filial,
@@ -52,7 +51,8 @@ logger.info(`[${functionName}] Inserción de campos`);
                 numbor: registro.numbor,
                 chofer: registro.chofer,
                 statusbor: registro.statusbor,
-                statusEntrega: registro.statusEntrega      
+                statusEntrega: registro.statusEntrega,
+                fechaEntrega: registro.fechaEntrega      
             });
             insertedCount++;
         }

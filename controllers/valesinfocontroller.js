@@ -1,17 +1,25 @@
 // controllers/valesinfocontroller.js
 const { QueryTypes } = require('sequelize'); 
 const { sequelize } = require('../dbconections/db');
-
 const logger = require('../logger');
 const functionName = 'Vales detalle';
 
-
 async function valesinfocontroller(vale, filial, docto, serie) {
-  logger.info(`[${functionName}] Iniciando proceso...`);
-  try {
-    console.log("Parámetros recibidos en valesinfocontroller:", { vale, filial, docto, serie });
+  logger.info(`[${functionName}] Iniciando proceso...`)
 
-    const resultados = await sequelize.query(`
+  try {
+    // Verificar que los parámetros no sean undefined o null
+    if (vale === undefined || filial === undefined || docto === undefined || serie === undefined) {
+      throw new Error('Parámetros undefined recibidos en controller');
+    }
+
+    const params = {
+      vale: String(vale).trim(),
+      filial: String(filial).trim(),
+      docto: String(docto).trim(),
+      serie: String(serie).trim()
+    };
+    const query = `
       SELECT 
         A.VAL_FILIAL,
         A.VAL_NUMERO, 
@@ -35,22 +43,31 @@ async function valesinfocontroller(vale, filial, docto, serie) {
         AND A.VAL_FILIAL = :filial 
         AND A.VAL_SERIEORIGINAL = :serie 
         AND A.VAL_DOCORIGINAL = :docto
-    `, {
-      replacements: { 
-        vale: String(vale), 
-        filial: String(filial), 
-        docto: String(docto), 
-        serie: String(serie) 
-      },
+    `;
+    
+    const resultados = await sequelize.query(query, {
+      replacements: params,
       type: QueryTypes.SELECT
     });
+    
+    if (resultados.length === 0) {
+      console.log("     CONSULTA VACÍA - Posibles causas:");
+      console.log("   - No hay registros con esos parámetros");
+      console.log("   - VAL_STATUS no es 'A'");
+      console.log("   - No coinciden las relaciones entre tablas");
+      console.log("   - Error en nombres de tablas/columnas");
+    }
 
-    logger.info(`[${functionName}] Resultados obtenidos`);
     return resultados;
+
   } catch (error) {
-    console.error("❌ Error en valesinfocontroller:", error);
+    console.error(`ERROR en ${functionName}:`, {
+      message: error.message,
+      stack: error.stack,
+      original: error.original
+    });
     throw error;
   }
 }
 
-module.exports = { valesinfocontroller};
+module.exports = { valesinfocontroller };

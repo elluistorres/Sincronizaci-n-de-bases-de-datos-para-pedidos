@@ -59,6 +59,11 @@ const { sequelizesqlw } = require('../dbconections/db');
         allowNull: true,  // Allow null explicitly
         
       },
+      fechaEntrega: {
+        type: DataTypes.STRING(20),
+        allowNull: true,  // Allow null explicitly
+        
+      },
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,

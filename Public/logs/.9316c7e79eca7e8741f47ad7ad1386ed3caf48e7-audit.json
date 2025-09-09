@@ -6,16 +6,6 @@
     "auditLog": "Public\\logs\\.9316c7e79eca7e8741f47ad7ad1386ed3caf48e7-audit.json",
     "files": [
         {
-            "date": 1755895918260,
-            "name": "Public\\logs\\application-2025-08-22.log",
-            "hash": "47e3fc4ddc6521bab7528257e9a923ceb8723ee6c9377acba8586261ee6060dc"
-        },
-        {
-            "date": 1756143381893,
-            "name": "Public\\logs\\application-2025-08-25.log",
-            "hash": "d6b8b416b29adc7b878d257a7b801c5725cafc508907753583989319113484b8"
-        },
-        {
             "date": 1756250849543,
             "name": "Public\\logs\\application-2025-08-26.log",
             "hash": "85f147870bc4179fe21aa341ce9cb72f17bbdc3a23361769c75c3061455d9606"
@@ -49,6 +39,21 @@
             "date": 1757100250389,
             "name": "Public\\logs\\application-2025-09-05.log",
             "hash": "c0520165e069c6db51210129e5bcefea058e7aef89853cdc25da53319a0383ce"
+        },
+        {
+            "date": 1757179424833,
+            "name": "Public\\logs\\application-2025-09-06.log",
+            "hash": "b3bbfa74ef28bd8442e3a25ad412f28fe51b9cf2cd77963a1861394f9ca5602a"
+        },
+        {
+            "date": 1757356475499,
+            "name": "Public\\logs\\application-2025-09-08.log",
+            "hash": "93aaf21f48b19e9df1fb557e3a196584ff208dbd870da42dee6be04b538f8d56"
+        },
+        {
+            "date": 1757437404834,
+            "name": "Public\\logs\\application-2025-09-09.log",
+            "hash": "2e85e4d251054fcfe946a02ad0ad4b3a922fbfd5266fb6bbba5407f92cb023a0"
         }
     ],
     "hashType": "sha256"

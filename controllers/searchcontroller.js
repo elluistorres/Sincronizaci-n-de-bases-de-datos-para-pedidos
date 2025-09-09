@@ -52,7 +52,7 @@ async function searchRecords(filters) {
         // NOTA: Manejamos los duplicados manualmente.
         queryOptions.attributes = [
             'id', 'filial', 'pedido', 'docto', 'serie', 'emision', 'cliente', 'numbor',
-            'chofer', 'statusEntrega', 'statusbor', 'status'
+            'chofer', 'statusEntrega', 'statusbor', 'status', 'fechaEntrega'
         ];
 
         const results = await Estatustlmkw.findAll(queryOptions);
@@ -72,9 +72,6 @@ async function searchRecords(filters) {
 
         // Convertir el objeto de resultados únicos a un array
         const registrosFiltrados = Object.values(resultadosUnicos);
-        logger.info(`[${functionName}] ${registrosFiltrados.length} registros únicos encontrados.`);
-
-        logger.info(`[${functionName}] Funcion de promesa con status de venta y vales pendientes`);
         const resultadosFinales = await Promise.all(
             registrosFiltrados.map(async (registro) => {
                 try {

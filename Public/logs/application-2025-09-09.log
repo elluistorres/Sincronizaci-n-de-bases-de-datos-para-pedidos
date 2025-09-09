@@ -8,99 +8,32 @@
 {"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
 {"level":"info","message":"[Buscar registros] Formateo de fecha."}
 {"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] Funcion de promesas con status de venta y vales pendientes"}
-{"level":"info","message":"[Buscar registros] Vales obtenidos"}
-{"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"servidor corriendo"}
-{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
-{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
-{"level":"info","message":"[Buscar registros] Validación de campos"}
-{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
-{"level":"info","message":"[Buscar registros] Formateo de fecha."}
-{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] Filtrando 61 registros para eliminar duplicados."}
-{"level":"info","message":"[Buscar registros] 15 registros únicos encontrados."}
-{"level":"info","message":"[Buscar registros] Funcion de promesas con status de venta y vales pendientes"}
-{"level":"info","message":"[Buscar registros] Vales obtenidos"}
-{"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
-{"level":"info","message":"[Buscar registros] Validación de campos"}
-{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
-{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] Filtrando 35 registros para eliminar duplicados."}
-{"level":"info","message":"[Buscar registros] 2 registros únicos encontrados."}
-{"level":"info","message":"[Buscar registros] Funcion de promesas con status de venta y vales pendientes"}
-{"level":"info","message":"[Buscar registros] Vales obtenidos"}
-{"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"servidor corriendo"}
-{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
-{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
-{"level":"info","message":"[Buscar registros] Validación de campos"}
-{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
-{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] Filtrando 35 registros para eliminar duplicados."}
-{"level":"info","message":"[Buscar registros] 2 registros únicos encontrados."}
-{"level":"info","message":"[Buscar registros] Funcion de promesas con status de venta y vales pendientes"}
-{"level":"info","message":"[Buscar registros] Vales obtenidos"}
-{"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"servidor corriendo"}
-{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
-{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"servidor corriendo"}
-{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
-{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"[MVsync] Iniciando proceso..."}
-{"level":"error","message":"[MVsync] Error crítico: Cannot access 'functionName' before initialization"}
-{"level":"info","message":"[MVsync] Iniciando proceso..."}
-{"level":"error","message":"[MVsync] Error crítico: Cannot access 'functionName' before initialization"}
-{"level":"info","message":"[MVsync] Iniciando proceso..."}
-{"level":"error","message":"[MVsync] Error crítico: Cannot access 'functionName' before initialization"}
-{"level":"info","message":"servidor corriendo"}
-{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
-{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"servidor corriendo"}
-{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
-{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"[MVsync] Iniciando proceso..."}
-{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 691 registros a insertar"}
-{"level":"info","message":"[insertarEnOtraTabla] Verificación de campos duplicados en base"}
-{"level":"info","message":"[insertarEnOtraTabla] Inserción de campos"}
-{"level":"info","message":"[insertarEnOtraTabla] Finalizado. Insertados: 691, Duplicados omitidos: 0"}
-{"level":"info","message":"[MVsync] Insertados 691 registros en destino"}
-{"level":"info","message":"[MVsync] Lote 1: 691 borrados"}
-{"level":"info","message":"[MVsync] Total borrados: 691/691"}
-{"level":"info","message":"[MVsync] Proceso finalizado! :)"}
-{"level":"info","message":"servidor corriendo"}
-{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
-{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
-{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
-{"level":"info","message":"[Buscar registros] Validación de campos"}
-{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
-{"level":"info","message":"[Buscar registros] Formateo de fecha."}
-{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] 17 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] 26 registros únicos encontrados."}
 {"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
 {"level":"info","message":"[Buscar registros] Vales obtenidos"}
 {"level":"info","message":"[Buscar registros] Función finalizada."}
 {"level":"info","message":"[Buscar registros] Iniciando proceso..."}
 {"level":"info","message":"[Buscar registros] Validación de campos"}
 {"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 26 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 26 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
 {"level":"info","message":"[Buscar registros] Funcion de busqueda."}
 {"level":"info","message":"[Buscar registros] 1 registros únicos encontrados."}
 {"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
@@ -116,7 +49,7 @@
 {"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
 {"level":"info","message":"[Buscar registros] Formateo de fecha."}
 {"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] 17 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] 26 registros únicos encontrados."}
 {"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
 {"level":"info","message":"[Buscar registros] Vales obtenidos"}
 {"level":"info","message":"[Buscar registros] Función finalizada."}
@@ -125,95 +58,219 @@
 {"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
 {"level":"info","message":"[Buscar registros] Formateo de fecha."}
 {"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] 47 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] 4 registros únicos encontrados."}
 {"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
 {"level":"info","message":"[Buscar registros] Vales obtenidos"}
 {"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
-{"level":"info","message":"[Buscar registros] Validación de campos"}
-{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
-{"level":"info","message":"[Buscar registros] Formateo de fecha."}
-{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] 40 registros únicos encontrados."}
-{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
-{"level":"info","message":"[Buscar registros] Vales obtenidos"}
-{"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
-{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
-{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
-{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 175 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Verificación de campos duplicados en base"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción de campos"}
+{"level":"info","message":"[insertarEnOtraTabla] Finalizado. Insertados: 175, Duplicados omitidos: 0"}
+{"level":"info","message":"[MVsync] Insertados 175 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 175 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 175/175"}
+{"level":"info","message":"[MVsync] Proceso finalizado! :)"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
 {"level":"info","message":"servidor corriendo"}
 {"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
 {"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 1 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Verificación de campos duplicados en base"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción de campos"}
+{"level":"info","message":"[insertarEnOtraTabla] Finalizado. Insertados: 1, Duplicados omitidos: 0"}
+{"level":"info","message":"[MVsync] Insertados 1 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 1 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 1/1"}
+{"level":"info","message":"[MVsync] Proceso finalizado! :)"}
 {"level":"info","message":"[Buscar registros] Iniciando proceso..."}
 {"level":"info","message":"[Buscar registros] Validación de campos"}
 {"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
 {"level":"info","message":"[Buscar registros] Formateo de fecha."}
 {"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] 15 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] 28 registros únicos encontrados."}
 {"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
 {"level":"info","message":"[Buscar registros] Vales obtenidos"}
 {"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
-{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
-{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
-{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 24 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 28 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 28 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 24 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 49 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 58 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
+{"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
+{"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
 {"level":"info","message":"servidor corriendo"}
 {"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
 {"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
-{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
-{"level":"info","message":"[Buscar registros] Validación de campos"}
-{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
-{"level":"info","message":"[Buscar registros] Formateo de fecha."}
-{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] 17 registros únicos encontrados."}
-{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
-{"level":"info","message":"[Buscar registros] Vales obtenidos"}
-{"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
-{"level":"info","message":"[Buscar registros] Validación de campos"}
-{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
-{"level":"info","message":"[Buscar registros] Formateo de fecha."}
-{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] 15 registros únicos encontrados."}
-{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
-{"level":"info","message":"[Buscar registros] Vales obtenidos"}
-{"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
-{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
-{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
-{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
 {"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 28 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
+{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 1 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Verificación de campos duplicados en base"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción de campos"}
+{"level":"info","message":"[insertarEnOtraTabla] Finalizado. Insertados: 1, Duplicados omitidos: 0"}
+{"level":"info","message":"[MVsync] Insertados 1 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 1 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 1/1"}
+{"level":"info","message":"[MVsync] Proceso finalizado! :)"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Iniciando proceso..."}
+{"level":"info","message":"[Buscar registros] Validación de campos"}
+{"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
+{"level":"info","message":"[Buscar registros] Formateo de fecha."}
+{"level":"info","message":"[Buscar registros] Funcion de busqueda."}
+{"level":"info","message":"[Buscar registros] 28 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
+{"level":"info","message":"[Buscar registros] Vales obtenidos"}
+{"level":"info","message":"[Buscar registros] Función finalizada."}
 {"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
 {"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
 {"level":"info","message":"[Buscar registros] Iniciando proceso..."}
 {"level":"info","message":"[Buscar registros] Validación de campos"}
 {"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
 {"level":"info","message":"[Buscar registros] Formateo de fecha."}
 {"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] 15 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] 7 registros únicos encontrados."}
 {"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
 {"level":"info","message":"[Buscar registros] Vales obtenidos"}
 {"level":"info","message":"[Buscar registros] Función finalizada."}
-{"level":"info","message":"[Vales detalle] Iniciando proceso..."}
-{"level":"info","message":"[Vales detalle] Resultados obtenidos"}
-{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 5 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Verificación de campos duplicados en base"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción de campos"}
+{"level":"info","message":"[insertarEnOtraTabla] Finalizado. Insertados: 5, Duplicados omitidos: 0"}
+{"level":"info","message":"[MVsync] Insertados 5 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 5 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 5/5"}
+{"level":"info","message":"[MVsync] Proceso finalizado! :)"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
 {"level":"info","message":"[conexión a SQLSERVER] iniciando..."}
 {"level":"info","message":"[conexión a SQLSERVER] Configuración exitosa."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] iniciando..."}
 {"level":"info","message":"[conexión a MYSQLWORBENCH] Configuración exitosa."}
+{"level":"info","message":"servidor corriendo"}
+{"level":"info","message":"[MVsync] Iniciando proceso..."}
+{"level":"info","message":"[insertarEnOtraTabla] Iniciando... 17 registros a insertar"}
+{"level":"info","message":"[insertarEnOtraTabla] Verificación de campos duplicados en base"}
+{"level":"info","message":"[insertarEnOtraTabla] Inserción de campos"}
+{"level":"info","message":"[insertarEnOtraTabla] Finalizado. Insertados: 17, Duplicados omitidos: 0"}
+{"level":"info","message":"[MVsync] Insertados 17 registros en destino"}
+{"level":"info","message":"[MVsync] Lote 1: 17 borrados"}
+{"level":"info","message":"[MVsync] Total borrados: 17/17"}
+{"level":"info","message":"[MVsync] Proceso finalizado! :)"}
 {"level":"info","message":"[Buscar registros] Iniciando proceso..."}
 {"level":"info","message":"[Buscar registros] Validación de campos"}
 {"level":"info","message":"[Buscar registros] Construcción dinámica del WHERE"}
 {"level":"info","message":"[Buscar registros] Formateo de fecha."}
 {"level":"info","message":"[Buscar registros] Funcion de busqueda."}
-{"level":"info","message":"[Buscar registros] 15 registros únicos encontrados."}
+{"level":"info","message":"[Buscar registros] 129 registros únicos encontrados."}
 {"level":"info","message":"[Buscar registros] Funcion de promesa con status de venta y vales pendientes"}
 {"level":"info","message":"[Buscar registros] Vales obtenidos"}
 {"level":"info","message":"[Buscar registros] Función finalizada."}

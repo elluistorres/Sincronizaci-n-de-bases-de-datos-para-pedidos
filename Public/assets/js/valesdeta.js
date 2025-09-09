@@ -1,6 +1,7 @@
-// La función ahora acepta parámetros
-async function cargarValesDetalle(vale, filial, docto, serie) {
-
+// ✅ MODIFICACIÓN: Escuchar el evento personalizado
+window.addEventListener('cargarDetalleVale', async function(e) {
+    const { vale, filial, docto, serie } = e.detail;
+    
     // Referencias al modal y al contenedor
     const detalleModal = new bootstrap.Modal(document.getElementById('detalleModal'));
     const modalTableContainer = document.getElementById('modal-table-container');
@@ -11,7 +12,7 @@ async function cargarValesDetalle(vale, filial, docto, serie) {
             <div class="spinner-border text-primary" role="status">
                 <span class="visually-hidden">Cargando...</span>
             </div>
-            <p class="mt-2 text-muted">Cargando detalle del vale...</p>
+            <p class="mt-2 text-muted">Cargando detalle del vale ${vale}...</p>
         </div>
     `;
 
@@ -53,7 +54,7 @@ async function cargarValesDetalle(vale, filial, docto, serie) {
             // Muestra un mensaje si no hay datos
             modalTableContainer.innerHTML = `
                 <div class="alert alert-info" role="alert">
-                    No se encontraron datos para este vale.
+                    No se encontraron datos para el vale ${vale}.
                 </div>
             `;
         }
@@ -66,4 +67,4 @@ async function cargarValesDetalle(vale, filial, docto, serie) {
             </div>
         `;
     }
-}
+});

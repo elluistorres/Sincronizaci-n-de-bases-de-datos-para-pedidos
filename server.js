@@ -4,6 +4,9 @@ const path = require('path');
 const app = express();
 const logger = require('./logger');
 
+require("./cron/nodecron.js");
+
+
 // Middlewares
 app.use(cors());
 // Middlewares (corregido)

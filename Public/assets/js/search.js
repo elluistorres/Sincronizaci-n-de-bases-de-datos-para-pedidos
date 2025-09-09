@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const showInitialMessage = () => {
         tableBody.innerHTML = `
             <tr>
-                <td colspan="11" class="text-center text-muted py-4">
+                <td colspan="12" class="text-center text-muted py-4">
                     Utilice los filtros superiores para iniciar una búsqueda.
                 </td>
             </tr>
@@ -28,25 +28,25 @@ document.addEventListener('DOMContentLoaded', function() {
             fecha2: document.getElementById('fecha2').value
         };
 
-      // Lógica de validación
-const hasDocto = !!searchParams.docto;
-const hasSerie = !!searchParams.serie;
-const hasDates = searchParams.fecha1 && searchParams.fecha2;
+        // Lógica de validación
+        const hasDocto = !!searchParams.docto;
+        const hasSerie = !!searchParams.serie;
+        const hasDates = searchParams.fecha1 && searchParams.fecha2;
 
-// Caso 1: Si busca por Serie + Docto (folio completo) → válido SIN fechas
-if (hasSerie && hasDocto) {
-    // válido, no pedimos fechas
-}
-// Caso 2: Si busca SOLO por Serie o SOLO por Docto → deben venir las fechas
-else if ((hasSerie || hasDocto) && !hasDates) {
-    alert('Para buscar por Serie o Documento, debe seleccionar un rango de fechas.');
-    return;
-}
-// Caso 3: Si no puso ni Serie ni Docto → error
-else if (!hasSerie && !hasDocto) {
-    alert('Debe ingresar al menos Serie o Documento.');
-    return;
-}
+        // Caso 1: Si busca por Serie + Docto (folio completo) → válido SIN fechas
+        if (hasSerie && hasDocto) {
+            // válido, no pedimos fechas
+        }
+        // Caso 2: Si busca SOLO por Serie o SOLO por Docto → deben venir las fechas
+        else if ((hasSerie || hasDocto) && !hasDates) {
+            alert('Para buscar por Serie o Documento, debe seleccionar un rango de fechas.');
+            return;
+        }
+        // Caso 3: Si no puso ni Serie ni Docto → error
+        else if (!hasSerie && !hasDocto) {
+            alert('Debe ingresar al menos Serie o Documento.');
+            return;
+        }
 
         // Mostrar carga y ocultar otros mensajes
         loadingMessage.classList.remove('d-none');
@@ -89,6 +89,7 @@ else if (!hasSerie && !hasDocto) {
                                     : '-'}
                             </td>
                             <td>${registro.statusGeneral || '-'}</td>
+                            <td>${registro.fechaEntrega || '-'}</td>
                         </tr>
                     `;
                 }).join('');
@@ -96,11 +97,12 @@ else if (!hasSerie && !hasDocto) {
                 // Mostrar mensaje de no resultados
                 noResultsMessage.classList.remove('d-none');
             }
-            // --- LÍNEAS AGREGADAS PARA BORRAR LOS INPUTS ---
-    document.getElementById('docto').value = '';
-    document.getElementById('serie').value = '';
-    document.getElementById('fecha1').value = '';
-    document.getElementById('fecha2').value = '';
+            
+            // Limpiar formulario
+            document.getElementById('docto').value = '';
+            document.getElementById('serie').value = '';
+            document.getElementById('fecha1').value = '';
+            document.getElementById('fecha2').value = '';
 
         } catch (error) {
             // Manejo de errores
@@ -116,7 +118,7 @@ else if (!hasSerie && !hasDocto) {
 
             tableBody.innerHTML = `
                 <tr>
-                    <td colspan="11" class="text-center text-danger">
+                    <td colspan="12" class="text-center text-danger">
                         ${errorMessage}
                     </td>
                 </tr>
@@ -124,24 +126,25 @@ else if (!hasSerie && !hasDocto) {
         }
     });
 
-    // Delegación de eventos para manejar el clic en los enlaces de los vales
+    // ✅ MODIFICACIÓN: Delegación de eventos con Custom Event
     tableBody.addEventListener('click', function(e) {
         const link = e.target.closest('.vale-link');
         if (link) {
             e.preventDefault(); 
             
             // Obtener los datos de los atributos del enlace
-            const vale = link.dataset.vale;
-            const filial = link.dataset.filial;
-            const docto = link.dataset.docto;
-            const serie = link.dataset.serie;
+            const valeData = {
+                vale: link.dataset.vale,
+                filial: link.dataset.filial,
+                docto: link.dataset.docto,
+                serie: link.dataset.serie
+            };
             
-            // Llama a la función global en valesdeta.js
-            if (typeof cargarValesDetalle === 'function') {
-                cargarValesDetalle(vale, filial, docto, serie);
-            } else {
-                console.error("La función 'cargarValesDetalle' no está definida. Asegúrate de que valesdeta.js esté enlazado correctamente.");
-            }
+            // ✅ NUEVO: Disparar evento personalizado
+            const valeEvent = new CustomEvent('cargarDetalleVale', {
+                detail: valeData
+            });
+            window.dispatchEvent(valeEvent);
         }
     });
 });
