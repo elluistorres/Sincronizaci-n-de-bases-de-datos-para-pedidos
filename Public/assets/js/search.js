@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableBody = document.getElementById('tableBody');
     const loadingMessage = document.getElementById('loadingMessage');
     const noResultsMessage = document.getElementById('noResultsMessage');
+    const btnSoloPendientes = document.getElementById('btnSoloPendientes');
+    
+    // Variables para almacenar datos y estado
+    let todosLosResultados = []; // Almacena TODOS los resultados originales
+    let mostrandoSoloPendientes = false; // Estado del filtro
 
     // Mensaje inicial en la tabla
     const showInitialMessage = () => {
@@ -15,10 +20,100 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
     };
     
+    // Función para renderizar la tabla
+    const renderizarTabla = (resultados) => {
+        if (resultados.length > 0) {
+            tableBody.innerHTML = resultados.map((registro, index) => {
+                return `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${registro.filial || '-'}</td>
+                        <td>${registro.pedido || '-'}</td>
+                        <td>${registro.docto || '-'}</td>
+                        <td>${registro.serie || '-'}</td>
+                        <td>${registro.emision || '-'}</td>
+                        <td>${registro.cliente || '-'}</td>
+                        <td>${registro.numbor || '-'}</td>
+                        <td>${registro.chofer || '-'}</td>
+                        <td>
+                            ${registro.valesPendientes && registro.valesPendientes.length > 0
+                                ? registro.valesPendientes.map(vale =>
+                                    `<a href="#" class="vale-link" 
+                                       data-vale="${vale}" 
+                                       data-filial="${registro.filial}" 
+                                       data-docto="${registro.docto}" 
+                                       data-serie="${registro.serie}">
+                                        ${vale}
+                                    </a>`
+                                  ).join('<br>')
+                                : '-'}
+                        </td>
+                        <td>${registro.statusGeneral || '-'}</td>
+                        <td>${registro.fechaEntrega || '-'}</td>
+                    </tr>
+                `;
+            }).join('');
+        } else {
+            noResultsMessage.classList.remove('d-none');
+            tableBody.innerHTML = '';
+        }
+    };
+    
+    // Función para alternar el filtro
+    const toggleFiltro = () => {
+        if (todosLosResultados.length === 0) {
+            alert('Primero debe realizar una búsqueda.');
+            return;
+        }
+
+        mostrandoSoloPendientes = !mostrandoSoloPendientes;
+        
+        if (mostrandoSoloPendientes) {
+            // Filtrar solo los que tienen valesPendientes
+            const soloConVales = todosLosResultados.filter(registro => 
+                registro.valesPendientes && registro.valesPendientes.length > 0
+            );
+            
+            btnSoloPendientes.textContent = 'Mostrar todos';
+            btnSoloPendientes.classList.remove('btn-info');
+            btnSoloPendientes.classList.add('btn-warning');
+            
+            noResultsMessage.classList.add('d-none');
+            renderizarTabla(soloConVales);
+            
+            if (soloConVales.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="12" class="text-center text-muted py-4">
+                            No se encontraron registros con vales pendientes.
+                        </td>
+                    </tr>
+                `;
+            }
+        } else {
+            // Mostrar todos los resultados originales
+            btnSoloPendientes.textContent = 'Solo pendientes';
+            btnSoloPendientes.classList.remove('btn-warning');
+            btnSoloPendientes.classList.add('btn-info');
+            
+            noResultsMessage.classList.add('d-none');
+            renderizarTabla(todosLosResultados);
+        }
+    };
+    
     showInitialMessage();
+
+    // Event listener para el botón "Solo pendientes"
+    btnSoloPendientes.addEventListener('click', toggleFiltro);
 
     searchForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        
+        // Resetear estado del filtro al hacer nueva búsqueda
+        mostrandoSoloPendientes = false;
+        btnSoloPendientes.textContent = 'Solo pendientes';
+        btnSoloPendientes.classList.remove('btn-warning');
+        btnSoloPendientes.classList.add('btn-info');
         
         // Obtener valores del formulario
         const searchParams = {
@@ -28,21 +123,18 @@ document.addEventListener('DOMContentLoaded', function() {
             fecha2: document.getElementById('fecha2').value
         };
 
-        // Lógica de validación
+        // Lógica de validación (mantener la misma)
         const hasDocto = !!searchParams.docto;
         const hasSerie = !!searchParams.serie;
         const hasDates = searchParams.fecha1 && searchParams.fecha2;
 
-        // Caso 1: Si busca por Serie + Docto (folio completo) → válido SIN fechas
         if (hasSerie && hasDocto) {
             // válido, no pedimos fechas
         }
-        // Caso 2: Si busca SOLO por Serie o SOLO por Docto → deben venir las fechas
         else if ((hasSerie || hasDocto) && !hasDates) {
             alert('Para buscar por Serie o Documento, debe seleccionar un rango de fechas.');
             return;
         }
-        // Caso 3: Si no puso ni Serie ni Docto → error
         else if (!hasSerie && !hasDocto) {
             alert('Debe ingresar al menos Serie o Documento.');
             return;
@@ -61,42 +153,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Ocultar mensaje de carga
             loadingMessage.classList.add('d-none');
 
-            if (resultados.length > 0) {
-                // Llenar la tabla con los resultados
-                tableBody.innerHTML = resultados.map((registro, index) => {
-                    return `
-                        <tr>
-                            <td>${index + 1}</td>
-                            <td>${registro.filial || '-'}</td>
-                            <td>${registro.pedido || '-'}</td>
-                            <td>${registro.docto || '-'}</td>
-                            <td>${registro.serie || '-'}</td>
-                            <td>${registro.emision || '-'}</td>
-                            <td>${registro.cliente || '-'}</td>
-                            <td>${registro.numbor || '-'}</td>
-                            <td>${registro.chofer || '-'}</td>
-                            <td>
-                                ${registro.valesPendientes && registro.valesPendientes.length > 0
-                                    ? registro.valesPendientes.map(vale =>
-                                        `<a href="#" class="vale-link" 
-                                           data-vale="${vale}" 
-                                           data-filial="${registro.filial}" 
-                                           data-docto="${registro.docto}" 
-                                           data-serie="${registro.serie}">
-                                            ${vale}
-                                        </a>`
-                                      ).join('<br>')
-                                    : '-'}
-                            </td>
-                            <td>${registro.statusGeneral || '-'}</td>
-                            <td>${registro.fechaEntrega || '-'}</td>
-                        </tr>
-                    `;
-                }).join('');
-            } else {
-                // Mostrar mensaje de no resultados
-                noResultsMessage.classList.remove('d-none');
-            }
+            // Guardar TODOS los resultados para el filtro
+            todosLosResultados = resultados;
+
+            // Renderizar tabla con todos los resultados
+            renderizarTabla(resultados);
             
             // Limpiar formulario
             document.getElementById('docto').value = '';
@@ -105,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('fecha2').value = '';
 
         } catch (error) {
-            // Manejo de errores
+            // Manejo de errores (mantener el mismo)
             loadingMessage.classList.add('d-none');
             console.error('Error:', error);
             
@@ -123,16 +184,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                 </tr>
             `;
+            
+            // Limpiar datos al tener error
+            todosLosResultados = [];
         }
     });
 
-    // ✅ MODIFICACIÓN: Delegación de eventos con Custom Event
+    // Delegación de eventos para vales (mantener igual)
     tableBody.addEventListener('click', function(e) {
         const link = e.target.closest('.vale-link');
         if (link) {
             e.preventDefault(); 
             
-            // Obtener los datos de los atributos del enlace
             const valeData = {
                 vale: link.dataset.vale,
                 filial: link.dataset.filial,
@@ -140,7 +203,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 serie: link.dataset.serie
             };
             
-            // ✅ NUEVO: Disparar evento personalizado
             const valeEvent = new CustomEvent('cargarDetalleVale', {
                 detail: valeData
             });
