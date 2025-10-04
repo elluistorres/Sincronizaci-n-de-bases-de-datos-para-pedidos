@@ -6,22 +6,21 @@ const logger = require('./logger');
 
 require("./cron/nodecron.js");
 
-
 // Middlewares
 app.use(cors());
-// Middlewares (corregido)
-app.use(express.static(path.join(__dirname, 'Public'))); // Solo la carpeta Public
+app.use(express.static(path.join(__dirname, 'Public')));
 
 logger.info("servidor corriendo");
 
 // Routers
 const viewsRouter = require('./routes/index');
-//const apiRouter = require('./Public/routes/index.js');
+app.use('/', viewsRouter);
 
-app.use('/', viewsRouter);       // Rutas de vistas (HTML)
-//app.use('/api', apiRouter);     // Rutas de API (BD)
+// Configuración del puerto
+const PORT = process.env.PORT || 9000;
 
 // Iniciar servidor
-app.listen(8000, () => {
-  console.log('Servidor en http://localhost:8000');
+app.listen(PORT, () => {
+  console.log(`Servidor en http://localhost:${PORT}`);
+  logger.info(`Servidor iniciado en puerto ${PORT}`);
 });

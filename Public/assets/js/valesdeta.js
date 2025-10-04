@@ -1,4 +1,4 @@
-// ✅ MODIFICACIÓN: Escuchar el evento personalizado
+
 window.addEventListener('cargarDetalleVale', async function(e) {
     const { vale, filial, docto, serie } = e.detail;
     
@@ -16,7 +16,6 @@ window.addEventListener('cargarDetalleVale', async function(e) {
         </div>
     `;
 
-    // Muestra el modal ANTES de la petición
     detalleModal.show();
 
     try {

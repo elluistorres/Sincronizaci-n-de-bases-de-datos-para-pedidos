@@ -6,44 +6,14 @@
     "auditLog": "Public\\logs\\.9316c7e79eca7e8741f47ad7ad1386ed3caf48e7-audit.json",
     "files": [
         {
-            "date": 1756572453982,
-            "name": "Public\\logs\\application-2025-08-30.log",
-            "hash": "0b0a6756fe677c770029f2e05806eac50dfc1a8a14bef385fd9398d9ec71981f"
+            "date": 1759506396988,
+            "name": "Public\\logs\\application-2025-10-03.log",
+            "hash": "407033a5e391265cc36ec4883253a19c658a7f3a7198b072a5a1d49bfe1a2ba7"
         },
         {
-            "date": 1756746577074,
-            "name": "Public\\logs\\application-2025-09-01.log",
-            "hash": "4c5c5e9c48fc2e0e66a3704658664e034b882c4753e411e00863369a20b7bc55"
-        },
-        {
-            "date": 1757016880585,
-            "name": "Public\\logs\\application-2025-09-04.log",
-            "hash": "74b18d18932db8790e1a6639bf795759693afecc99544cb7fa3652fe567b9bb8"
-        },
-        {
-            "date": 1757100250389,
-            "name": "Public\\logs\\application-2025-09-05.log",
-            "hash": "c0520165e069c6db51210129e5bcefea058e7aef89853cdc25da53319a0383ce"
-        },
-        {
-            "date": 1757179424833,
-            "name": "Public\\logs\\application-2025-09-06.log",
-            "hash": "b3bbfa74ef28bd8442e3a25ad412f28fe51b9cf2cd77963a1861394f9ca5602a"
-        },
-        {
-            "date": 1757356475499,
-            "name": "Public\\logs\\application-2025-09-08.log",
-            "hash": "93aaf21f48b19e9df1fb557e3a196584ff208dbd870da42dee6be04b538f8d56"
-        },
-        {
-            "date": 1757437404834,
-            "name": "Public\\logs\\application-2025-09-09.log",
-            "hash": "2e85e4d251054fcfe946a02ad0ad4b3a922fbfd5266fb6bbba5407f92cb023a0"
-        },
-        {
-            "date": 1757717612360,
-            "name": "Public\\logs\\application-2025-09-12.log",
-            "hash": "3af20d44009d7d3d072778aedfb84722bed46e786d2ec6bc8bfad87ea991b24b"
+            "date": 1759594432938,
+            "name": "Public\\logs\\application-2025-10-04.log",
+            "hash": "cff9a4d06bb712ecbf4a2c965216a7707efc9f00af5e7283edc78f30296f8f6a"
         }
     ],
     "hashType": "sha256"

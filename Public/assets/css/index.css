@@ -1,12 +1,12 @@
 /* Estilos generales para el cuerpo de la página */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa; /* Un gris muy claro para el fondo */
+  background-color: #f8f9fa;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #007bff !important; /* Azul primario de Bootstrap */
+  background-color: #007bff !important;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -14,7 +14,7 @@ body {
 .navbar-brand {
   font-weight: 400;
   font-size: 1.2 rem;
-  color: #fff !important; /* Texto blanco para el brand */
+  color: #fff !important;
 }
 
 .navbar-toggler {
@@ -27,7 +27,7 @@ body {
 
 /* Formulario de Búsqueda */
 .form-control {
-  border-radius: .375rem; /* Bordes ligeramente redondeados */
+  border-radius: .375rem;
   border: 1px solid #ced4da;
   padding: .5rem .75rem;
 }
@@ -56,13 +56,13 @@ main.container {
 
 .card {
   border: none;
-  border-radius: .5rem; /* Bordes más redondeados para la tarjeta */
-  overflow: hidden; /* Asegura que la sombra se vea bien con la tabla */
+  border-radius: .5rem;
+  overflow: hidden; 
 }
 
 /* Tabla de resultados */
 .table {
-  margin-bottom: 0; /* Elimina el margen inferior predeterminado de la tabla dentro de la tarjeta */
+  margin-bottom: 0;
 }
 
 .table thead th {
@@ -91,8 +91,6 @@ main.container {
 }
 
 /* Clases de utilidad para responsive */
-/* Antes tenías desktop-only y mobile-only. Con Bootstrap 5,
- usamos las utilidades de display para un control más fino. */
 .d-flex.flex-wrap.align-items-center.justify-content-lg-end > div {
   min-width: 120px; /* Asegura un ancho mínimo para los campos en desktop */
 }
@@ -141,4 +139,9 @@ align-items: center; /*Centra verticalmente los elementos */
 }
 #serie{
   text-transform: uppercase;
+}
+/* 1. Fuerza el ancho de las celdas para que la tabla se desborde horizontalmente */
+#main-table-container table th,
+#main-table-container table td {
+    white-space: nowrap; 
 }

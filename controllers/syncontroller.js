@@ -68,9 +68,9 @@ logger.info(`[${functionName}] Inserción de campos`);
         };
 
     } catch (error) {
-        logger.error(`[${functionName}] Error: ${error.message}`);
-        throw error;
-    }
+    logger.error(`[${functionName}] Error detallado: ${JSON.stringify(error, null, 2)}`);
+    throw error;
+}
 }
 module.exports = {
     Synctables

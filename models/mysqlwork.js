@@ -6,62 +6,62 @@ const { sequelizesqlw } = require('../dbconections/db');
  const Estatustlmkw = sequelizesqlw.define("estatustlmk", {
       filial: {
         type: DataTypes.STRING(2),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,  // Permitimos nulos
     },
     pedido: {
       type: DataTypes.STRING(20),
-      allowNull: true,  // Allow null explicitly
+      allowNull: true,
       
     },
     docto: {
         type: DataTypes.STRING(30),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
       serie: {
         type: DataTypes.STRING(4),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
 
       emision: {
         type: DataTypes.STRING(20),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
       cliente: {
         type: DataTypes.STRING(10),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
       status: {
         type: DataTypes.STRING(30),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
       numbor: {
         type: DataTypes.STRING(10),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
       chofer: {
         type: DataTypes.STRING(50),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
       statusbor: {
         type: DataTypes.STRING(50),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
       statusEntrega: {
         type: DataTypes.STRING(30),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
       fechaEntrega: {
         type: DataTypes.STRING(20),
-        allowNull: true,  // Allow null explicitly
+        allowNull: true,
         
       },
       id: {
@@ -72,7 +72,7 @@ const { sequelizesqlw } = require('../dbconections/db');
  },
     {
       tableName: 'estatustlmk',
-      timestamps: false // ajusta según necesites
+      timestamps: false
     })
     
     module.exports = {Estatustlmkw, Op};

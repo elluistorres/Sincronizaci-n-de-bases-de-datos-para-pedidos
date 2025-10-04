@@ -10,7 +10,7 @@ async function searchRecords(filters) {
     logger.info(`[${functionName}] Iniciando proceso...`);
     const { docto, serie, fecha1, fecha2 } = filters;
 
-    // --- Lógica de Validación Mejorada ---
+    // Lógica de Validación Mejorada
     logger.info(`[${functionName}] Validación de campos`);
 
     if (!serie) {
@@ -21,7 +21,7 @@ async function searchRecords(filters) {
         throw new Error('Para buscar por Serie sin folio, debe seleccionar un rango de fechas.');
     }
 
-    // --- Construcción Dinámica del WHERE ---
+    // Construcción Dinámica del WHERE
     logger.info(`[${functionName}] Construcción dinámica del WHERE`);
     let whereClause = {};
 
@@ -57,7 +57,7 @@ async function searchRecords(filters) {
 
         const results = await Estatustlmkw.findAll(queryOptions);
 
-        // --- Lógica para filtrar y obtener solo el registro más reciente ---
+        // Lógica para filtrar y obtener solo el registro más reciente
         const resultadosUnicos = {};
 
         results.forEach(registroSequelize => {

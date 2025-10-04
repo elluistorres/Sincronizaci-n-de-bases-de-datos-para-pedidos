@@ -37,12 +37,12 @@ logger.info(`[${functionName2}] iniciando...`);
 let sequelizesqlw;
 try {
   sequelizesqlw = new Sequelize(
-    process.env.SQLWBD,      // Nombre de la base de datos
-    process.env.SQLWUSER,    // Usuario
-    process.env.SQLWPASS,    // Contraseña
+    process.env.SQLWBD,  
+    process.env.SQLWUSER,
+    process.env.SQLWPASS,
     {
       host: process.env.SQLWHOST,
-      port: parseInt(process.env.SQLWPORT, 10), // Asegúrate de que sea número
+      port: process.env.SQLWPORT,
       dialect: 'mysql',
       logging: false,
     }

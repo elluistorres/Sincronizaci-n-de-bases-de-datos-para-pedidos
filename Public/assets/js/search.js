@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('fecha2').value = '';
 
         } catch (error) {
-            // Manejo de errores (mantener el mismo)
+            // Manejo de errores
             loadingMessage.classList.add('d-none');
             console.error('Error:', error);
             
@@ -185,7 +185,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 </tr>
             `;
             
-            // Limpiar datos al tener error
             todosLosResultados = [];
         }
     });
