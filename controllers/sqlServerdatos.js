@@ -4,7 +4,7 @@ const { Synctables } = require('./syncontroller.js');
 const { sequelize } = require('../dbconections/db');
 
 async function MVsync() {
-  const functionName = 'MVsync'; // ✅ Declarada al inicio de la función
+  const functionName = 'MVsync';
   logger.info(`[${functionName}] Iniciando proceso...`);
   
   const transaction = await sequelize.transaction();

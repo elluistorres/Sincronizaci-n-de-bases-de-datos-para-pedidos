@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const showInitialMessage = () => {
         tableBody.innerHTML = `
             <tr>
-                <td colspan="12" class="text-center text-muted py-4">
+                <td colspan="11" class="text-center text-muted py-4">
                     Utilice los filtros superiores para iniciar una búsqueda.
                 </td>
             </tr>
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <tr>
                         <td>${index + 1}</td>
                         <td>${registro.filial || '-'}</td>
-                        <td>${registro.pedido || '-'}</td>
                         <td>${registro.docto || '-'}</td>
                         <td>${registro.serie || '-'}</td>
                         <td>${registro.emision || '-'}</td>
@@ -84,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (soloConVales.length === 0) {
                 tableBody.innerHTML = `
                     <tr>
-                        <td colspan="12" class="text-center text-muted py-4">
+                        <td colspan="11" class="text-center text-muted py-4">
                             No se encontraron registros con vales pendientes.
                         </td>
                     </tr>
@@ -123,13 +122,21 @@ document.addEventListener('DOMContentLoaded', function() {
             fecha2: document.getElementById('fecha2').value
         };
 
-        // Lógica de validación (mantener la misma)
+        // Lógica de validación
         const hasDocto = !!searchParams.docto;
         const hasSerie = !!searchParams.serie;
+        const has1date = searchParams.fecha1;
         const hasDates = searchParams.fecha1 && searchParams.fecha2;
 
         if (hasSerie && hasDocto) {
             // válido, no pedimos fechas
+        }
+        else if (hasDocto || !hasSerie){
+             alert('No puedes buscar solo por documento');
+            return;
+        }
+         else if ((hasSerie || hasDocto) && has1date) {
+            //correcto, solo se busca el dia de hoy
         }
         else if ((hasSerie || hasDocto) && !hasDates) {
             alert('Para buscar por Serie o Documento, debe seleccionar un rango de fechas.');
@@ -179,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             tableBody.innerHTML = `
                 <tr>
-                    <td colspan="12" class="text-center text-danger">
+                    <td colspan="11" class="text-center text-danger">
                         ${errorMessage}
                     </td>
                 </tr>

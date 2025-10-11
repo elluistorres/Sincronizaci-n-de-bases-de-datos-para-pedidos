@@ -6,7 +6,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #007bff !important;
+  background-color: #0099ff !important;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -89,12 +89,6 @@ main.container {
   background-color: #f8f9fa;
   border-top: 1px solid #e9ecef;
 }
-
-/* Clases de utilidad para responsive */
-.d-flex.flex-wrap.align-items-center.justify-content-lg-end > div {
-  min-width: 120px; /* Asegura un ancho mínimo para los campos en desktop */
-}
-
 /* Pequeños ajustes para la responsividad del formulario */
 @media (max-width: 767.98px) {
   .navbar-collapse .form-control,

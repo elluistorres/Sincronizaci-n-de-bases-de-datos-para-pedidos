@@ -78,8 +78,14 @@ async function searchRecords(filters) {
                     const [estatus, vales] = await Promise.all([
                         sequelize.query(`
                             SELECT CASE
+                            WHEN EXISTS(
+                            SELECT 1 FROM VALES WHERE VAL_DOCORIGINAL = :docto
+                                AND VAL_SERIEORIGINAL = :serie
+                                AND VAL_STATUS IN ('A')
+                                AND VAL_BORRADO <> '*' ) THEN 'PARCIALMENTE ENTREGADO'
                             WHEN EXISTS (
-                                SELECT 1 FROM OF_BORDERO WHERE NUMBOR = :numbor
+                                SELECT 1 FROM OF_BORDERO b INNER JOIN 
+                            SEA010 c ON b.NUMBOR = c.EA_NUMBOR AND c.D_E_L_E_T_ <> '*' WHERE b.NUMBOR = :numbor
                             ) THEN 'ENTREGADO'
                             WHEN EXISTS (
                                 SELECT 1 FROM SEA010 WHERE EA_PREFIXO = :serie AND EA_NUM = :docto AND EA_NUMBOR = :numbor
